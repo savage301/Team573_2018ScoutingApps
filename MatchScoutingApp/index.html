@@ -1,0 +1,145 @@
+<html>
+<link rel="stylesheet" href="styles.css">
+ <script type="text/javascript" src="scripts.js">
+</script>
+  <body>
+  	<h1 title="Team 573 2018 Mactch Scouting App">
+  	Team 573 2018 Match Scouting App</h1>
+  	<p>
+  		If you have questions ask Emily.
+  	</p>
+
+  	<form action="BackEnd.recordData" id="pitScoutForm" data-bind="true">
+       	  Team Number: <input type="text" name="teamName"><br>
+  		  Match Number: <input type="text" name="matchName"><br>
+  		  Scouter Name: <input type="text" name="scoutName"><br>
+  		  <p>
+             <label>Alliance Station</label>
+             <select name = "allianceStation">
+               <option value = "blank">---</option>
+               <option value = "Red1">Red 1</option>
+               <option value = "Red2">Red 2</option>
+               <option value = "Red3">Red 3</option>
+               <option value = "Blue1">Blue 1</option>
+               <option value = "Blue2">Blue 2</option>
+               <option value = "Blue3">Blue 3</option>
+             </select>
+          </p>
+  	
+       <fieldset>
+          <legend>Autonmous</legend>
+
+          <div id="Autodiv">
+
+          
+          <p> Switch (close) <br>
+          <img src="Minus.png" class="plusminus" onclick=minus("switchauto")>  
+          <input type="number" name="switchauto" class="numinput">
+          <img src="Plus.png" class="plusminus" onclick=plus("switchauto")>
+          </p>
+
+          
+
+          
+          <p>Scale <br>
+          <img src="Minus.png" class="plusminus" onclick=minus("scaleauto")>
+          <input type="number" name="scaleauto" class="numinput">
+          <img src="Plus.png" class="plusminus" onclick=plus("scaleauto")>
+          </p>
+          
+
+          
+          <p>Exchange <br>
+          <img src="Minus.png" class="plusminus" onclick=minus("exchangeauto")>
+          <input type="number" name="exchangeauto" class="numinput">
+          <img src="Plus.png" class="plusminus" onclick=plus("exchangeauto")>
+          </p>
+          
+          <p>Cross Line
+          <input type="checkbox" name="crosslineauto" > 
+          </p>
+          <p>
+             <label>Starting Pos.</label>
+             <select name = "startingposauto">
+               <option value = "blank">---</option>
+               <option value = "pos1">1</option>
+               <option value = "pos2">2</option>
+               <option value = "pos3">3</option>
+               <option value = "pos4">4</option>
+               <option value = "pos5">5</option>
+             </select>
+          </p>
+        </div>
+
+		</fieldset>
+
+
+
+       <fieldset>
+          <legend>Teleop</legend>
+          <p>Switch (close) <br>
+          <img src="Minus.png" class="plusminus" onclick=minus("switchclosetele")>
+             <input type="number" name="switchclosetele">
+          <img src="Plus.png" class="plusminus" onclick=plus("switchclosetele")>
+          </p>
+
+          
+          <p>Switch (far) <br>
+          <img src="Minus.png" class="plusminus" onclick=minus("switchfartele")>
+              <input type="number" name="switchfartele">
+          <img src="Plus.png" class="plusminus" onclick=plus("switchfartele")>
+          </p>
+          
+          
+          <p>Scale <br>
+          <img src="Minus.png" class="plusminus" onclick=minus("scaletele")>
+             <input type="number" name="scaletele">
+          <img src="Plus.png" class="plusminus" onclick=plus("scaletele")>     
+          </p>
+          
+          
+          <p> Exchange<br>
+          <img src="Minus.png" class="plusminus" onclick=minus("exchangetele")>         
+             <input type="number" name="exchangetele">
+          <img src="Plus.png" class="plusminus" onclick=plus("exchangetele")>
+          </p>
+          
+          <p>
+          <label>Power Ups:</label><br>
+          <input type="checkbox" name="power1" > Power 1 <br>
+          <input type="checkbox" name="power2" > Power 2 <br>
+          <input type="checkbox" name="power3" > Power 3 <br>
+      	  </p>
+      	</fieldset>
+      	   <fieldset>
+          <legend>Endgame</legend>
+          <p>
+   
+          <input type="checkbox" name="driveOnPlatform" > Drive Onto Platform <br>
+		  <input type="checkbox" name="driveOnRamp" > Drive Onto Others Ramps <br>
+		  <input type="checkbox" name="deployRamp" > Deploy Ramps For Other Robots <br>
+		  <input type="checkbox" name="climb" > Climb Single <br>
+		  <input type="checkbox" name="climbWithOther" > Climb And Let Other Robot Climb Off Of You <br>
+          </p>
+      </fieldset>
+
+       <fieldset>
+          <legend>Notes</legend>
+          
+		  <textarea name="notes" style="width:900px;height:150px;"></textarea>
+          
+       </fieldset>
+
+       <input type="submit" value="Submit" id="form_submit">
+       <input type="reset" value="Reset">
+    </form>
+
+   <!--  <input type="button" href ="BackEnd.recordData" data-bind="true" name="input" value="Save Pit Scouting Sheet">
+
+<!--    <<a
+    href="BackEnd.recordData"
+    data-bind="true">
+      Click to say "Hello, world"
+    </a>  -->
+  </body>
+</html>

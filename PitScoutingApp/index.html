@@ -1,0 +1,94 @@
+<html>
+  <body>
+  	<h1 title="Team 573 2018 Pit Scouting App">
+  	Team 573 2018 Pit Scouting App</h1>
+  	<p>
+  		Along with filling out this page please also get a photo of each robot.
+  	</p>
+
+  	<form action="BackEnd.recordData" id="pitScoutForm" data-bind="true">
+       	  Team Number: <input type="text" name="teamName"><br>
+  		  Scouter Name: <input type="text" name="scoutName"><br>
+  	
+       <fieldset>
+          <legend>General Robot Questions</legend>
+          <p>
+             <label>Robot Drive Type:</label>
+             <select name = "driveType">
+               <option value = "blank">---</option>
+               <option value = "4-Wheel Tank">4-Wheel Tank</option>
+               <option value = "6-Wheel Tank">6-Wheel Tank</option>
+               <option value = "8-Wheel Tank">8-Wheel Tank</option>
+               <option value = "Tank With Omni">Tank With Omni</option>
+               <option value = "Mecanum">Mecanum</option>
+               <option value = "Swerve">Swerve</option>
+             </select>
+          </p>
+           <p>
+             <label>Bumper Height From Ground:</label>
+             <select name = "bumperHeight">
+             	<option value = "blank">---</option>
+               <option value = "0 in">0 in</option>
+               <option value = "0.5 in">0.5 in</option>
+               <option value = "1 in">1 in</option>
+               <option value = "1.5 in">1.5 in</option>
+               <option value = "2 in">2 in</option>
+               <option value = "2.5 in">2.5 in</option>
+             </select>
+          </p>
+          <p>
+          <label>Can you place a cube in the following places?</label><br>
+		  <input type="checkbox" name="exchange" > Exchange <br>
+		  <input type="checkbox" name="switch" > Switch <br>
+		  <input type="checkbox" name="scale" > Scale <br>
+		  </p>
+		</fieldset>
+
+
+       <fieldset>
+          <legend>End Game Questions</legend>
+          <p>
+          <label>What can you do in the end game?</label><br>
+          <input type="checkbox" name="driveOnPlatform" > Drive Onto Platform <br>
+		  <input type="checkbox" name="driveOnRamp" > Drive Onto Others Ramps <br>
+		  <input type="checkbox" name="deployRamp" > Deploy Ramps For Other Robots <br>
+		  <input type="checkbox" name="climb" > Climb Single <br>
+		  <input type="checkbox" name="climbWithOther" > Climb And Let Other Robot Climb Off Of You <br>
+          </p>
+      </fieldset>
+       <fieldset>
+          <legend>Autonomous Questions</legend>
+          <p>
+          <label>Check all Automodes that they have?</label><br>
+		  <input type="checkbox" name="crossLine"> Cross Line <br>
+		  <input type="checkbox" name="scoreSwitch" > Place Cube on Switch <br>
+		  <input type="checkbox" name="scoreScale" > Place Cube on Scale <br>
+		  <input type="checkbox" name="scoreExchange" > Place Cube in Exchange <br>
+		  <input type="checkbox" name="scoreSwitchandScale" > Place Cube on Scale then Switch <br>
+		  <input type="checkbox" name="scoreDoubleSwitch" > Place 2 Cubes on Switch <br>
+		  <input type="checkbox" name="scoreDoubleScale" > Place 2 Cubes on Scale <br>
+		  <input type="checkbox" name="scoreDoubleExchange" > Place 2 Cubes in Exchange <br>
+		  <input type="checkbox" name="other" > Other - Write Description in Notes <br>
+          </p>
+       </fieldset>
+
+       <fieldset>
+          <legend>Notes</legend>
+          
+		  <textarea name="notes" style="width:900px;height:150px;"></textarea>
+          
+       </fieldset>
+
+       <input type="submit" value="Submit" id="form_submit">
+       <input type="reset" value="Reset">
+    </form>
+
+   <!--  <input type="button" href ="BackEnd.recordData" data-bind="true" name="input" value="Save Pit Scouting Sheet">
+
+<!--    <<a
+    href="BackEnd.recordData"
+    data-bind="true">
+      Click to say "Hello, world"
+    </a>  -->
+  </body>
+</html>
