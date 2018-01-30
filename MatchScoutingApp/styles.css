@@ -5,12 +5,58 @@
 
 .numinput{
     position: relative;
-    bottom: 25px;
-    font-size:30px;
-}
+    width:75px;
+    height: 75px;
+    bottom: 32px;
+    font-size: 25px;
+    text-align: center;
+  }
 
 #Autodiv{
-	margin: auto;
+	/*margin: auto;*/
+	text-align: center;
     height: : 50%;
     padding: 10px;
+}
+
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+}
+
+td{
+	text-align: center;
+  vertical-align: middle;
+}
+
+.checkboxes {
+	width: 40px;
+	height: 40px;
+	background: #ddd;
+	margin: 20px 90px;
+	bottom: 15px;
+	border-radius: 100%;
+	position: relative;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.dropdownlist{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}   
+
+legend{
+	font-size: 30px;
+}
+
+.endgameP{
+	
 }

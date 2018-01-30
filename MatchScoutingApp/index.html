@@ -32,42 +32,51 @@
           <div id="Autodiv">
 
           
-          <p> Switch (close) <br>
-          <img src="Minus.png" class="plusminus" onclick=minus("switchauto")>  
-          <input type="number" name="switchauto" class="numinput">
-          <img src="Plus.png" class="plusminus" onclick=plus("switchauto")>
-          </p>
-
-          
-
-          
-          <p>Scale <br>
-          <img src="Minus.png" class="plusminus" onclick=minus("scaleauto")>
-          <input type="number" name="scaleauto" class="numinput">
-          <img src="Plus.png" class="plusminus" onclick=plus("scaleauto")>
-          </p>
-          
-
-          
-          <p>Exchange <br>
-          <img src="Minus.png" class="plusminus" onclick=minus("exchangeauto")>
-          <input type="number" name="exchangeauto" class="numinput">
-          <img src="Plus.png" class="plusminus" onclick=plus("exchangeauto")>
-          </p>
-          
-          <p>Cross Line
-          <input type="checkbox" name="crosslineauto" > 
-          </p>
-          <p>
-             <label>Starting Pos.</label>
-             <select name = "startingposauto">
-               <option value = "blank">---</option>
-               <option value = "pos1">1</option>
-               <option value = "pos2">2</option>
-               <option value = "pos3">3</option>
-               <option value = "pos4">4</option>
-               <option value = "pos5">5</option>
-             </select>
+          <p class="autoText"> 
+          	<table style="width: 100%">
+          		<tr>
+          			<th>Switch (close)</th>
+          			<th>Scale</th>
+          			<th>Exchange</th>
+          			<th>Cross Line</th>
+          			<th>Starting Pos.</th>
+          		</tr>
+          		<tr>
+          			<td>
+          			<img src="Minus.png" class="plusminus" onclick=minus("switchauto")>  
+          			<input type="number" name="switchauto" class="numinput">
+          			<img src="Plus.png" class="plusminus" onclick=plus("switchauto")>
+      				</td>
+      				<td>
+      				<!-- Scale --> 
+			          <img src="Minus.png" class="plusminus" onclick=minus("scaleauto")>
+			          <input type="number" name="scaleauto" class="numinput">
+			          <img src="Plus.png" class="plusminus" onclick=plus("scaleauto")>
+      				</td>
+      				<td>
+      				<!-- Exchange  -->
+			          <img src="Minus.png" class="plusminus" onclick=minus("exchangeauto")>
+			          <input type="number" name="exchangeauto" class="numinput">
+			          <img src="Plus.png" class="plusminus" onclick=plus("exchangeauto")>
+      				</td>
+      				<td>
+      				<!-- Cross Line -->
+         			<input type="checkbox" name="crosslineauto" class="checkboxes"> 
+      				</td>
+      				<td>
+      				<!-- <label>Starting Pos.</label> -->
+		             <select name = "startingposauto" class="dropdownlist">
+		               <option value = "blank">---</option>
+		               <option value = "pos1">1</option>
+		               <option value = "pos2">2</option>
+		               <option value = "pos3">3</option>
+		               <option value = "pos4">4</option>
+		               <option value = "pos5">5</option>
+		             </select>
+      				</td>
+          		</tr>
+          </table>
+             
           </p>
         </div>
 
@@ -77,50 +86,108 @@
 
        <fieldset>
           <legend>Teleop</legend>
-          <p>Switch (close) <br>
-          <img src="Minus.png" class="plusminus" onclick=minus("switchclosetele")>
-             <input type="number" name="switchclosetele">
-          <img src="Plus.png" class="plusminus" onclick=plus("switchclosetele")>
-          </p>
 
-          
-          <p>Switch (far) <br>
+          <table style="width: 100%">
+          	<tr>
+          		<th>
+          		Switch (close)
+          		</th>
+          		<th>
+          		Switch (far)
+          		</th>
+          	</tr>
+          	<tr>
+          		<td>
+          			<!-- <p>Switch (close) <br> -->
+          <img src="Minus.png" class="plusminus" onclick=minus("switchclosetele")>
+             <input type="number" name="switchclosetele" class="numinput">
+          <img src="Plus.png" class="plusminus" onclick=plus("switchclosetele")>
+          <!-- </p> -->
+      </td>
+          		<td>
+          			<!-- <p>Switch (far) <br> -->
           <img src="Minus.png" class="plusminus" onclick=minus("switchfartele")>
-              <input type="number" name="switchfartele">
+              <input type="number" name="switchfartele" class="numinput">
           <img src="Plus.png" class="plusminus" onclick=plus("switchfartele")>
-          </p>
-          
-          
-          <p>Scale <br>
+          <!-- </p> -->
+      </td>
+          	</tr>
+          	<tr>
+          		<th>Scale</th>
+          		<th>Exchange</th>
+          	</tr>
+          	<tr>
+          		<td>
+          			 <!--  <p>Scale <br> -->
           <img src="Minus.png" class="plusminus" onclick=minus("scaletele")>
-             <input type="number" name="scaletele">
+             <input type="number" name="scaletele" class="numinput">
           <img src="Plus.png" class="plusminus" onclick=plus("scaletele")>     
-          </p>
-          
-          
-          <p> Exchange<br>
+          <!-- </p> -->
+          		</td>
+          		<td>
+          		<!-- 	   <p> Exchange<br> -->
           <img src="Minus.png" class="plusminus" onclick=minus("exchangetele")>         
-             <input type="number" name="exchangetele">
+             <input type="number" name="exchangetele" class="numinput">
           <img src="Plus.png" class="plusminus" onclick=plus("exchangetele")>
-          </p>
-          
-          <p>
+        <!--   </p> -->
+
+          		</td>
+          	</tr>
+          </table>
+          <!-- <p>
           <label>Power Ups:</label><br>
           <input type="checkbox" name="power1" > Power 1 <br>
           <input type="checkbox" name="power2" > Power 2 <br>
           <input type="checkbox" name="power3" > Power 3 <br>
-      	  </p>
+      	  </p> -->
       	</fieldset>
       	   <fieldset>
           <legend>Endgame</legend>
-          <p>
-   
-          <input type="checkbox" name="driveOnPlatform" > Drive Onto Platform <br>
-		  <input type="checkbox" name="driveOnRamp" > Drive Onto Others Ramps <br>
-		  <input type="checkbox" name="deployRamp" > Deploy Ramps For Other Robots <br>
-		  <input type="checkbox" name="climb" > Climb Single <br>
-		  <input type="checkbox" name="climbWithOther" > Climb And Let Other Robot Climb Off Of You <br>
-          </p>
+
+         <!--  <p class = "endgameP"> -->
+   <table>
+   	<tr>
+   		<th>
+   			Drive Onto Platform 
+   		</th>
+   		<th>
+   			Drive Onto Others Ramps
+   		</th>
+   		<th>
+   			Deploy Ramps For Other Robots 
+   		</th>
+
+   	</tr>
+   	<tr>
+   		<td>
+   			<input type="checkbox" name="driveOnPlatform" class="checkboxes"> 
+   		</td>
+   		  <td>
+   			<input type="checkbox" name="driveOnRamp" class="checkboxes">
+   		</td>
+   		  <td>
+   			<input type="checkbox" name="deployRamp" class="checkboxes"> 
+   		</td>
+   	</tr>
+   </table>
+
+   <table>
+   	<tr>
+   		<th>
+   			Climb Single
+   		</th>
+   		<th>Climb And Let Other Robot Climb Off Of You</th>
+   	</tr>
+   	<tr>
+   		<td>
+   			<input type="checkbox" name="climb" class="checkboxes">
+   		</td>
+   		<td>
+   			<input type="checkbox" name="climbWithOther" class="checkboxes">
+   		</td>
+   	</tr>
+
+</table>
       </fieldset>
 
        <fieldset>
