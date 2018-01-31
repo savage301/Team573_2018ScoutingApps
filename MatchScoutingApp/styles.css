@@ -60,3 +60,33 @@ legend{
 .endgameP{
 	
 }
+
+.submitbtn{
+	background-color: #ff7f27; /* Orange*/
+    border: none;
+    color: white;
+    padding: 30px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+}
+
+.resetbtn{
+	background-color: #ff0000; /* Red*/
+    border: none;
+    color: white;
+    padding: 30px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+}
+
+#headerthing{
+	font-size: 25px;
+	font-weight: bold;
+}
+.namnumbox{
+	font-size: 25px;
+}

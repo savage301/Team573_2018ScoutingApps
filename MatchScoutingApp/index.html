@@ -8,14 +8,15 @@
   	<p>
   		If you have questions ask Emily.
   	</p>
-
-  	<form action="BackEnd.recordData" id="pitScoutForm" data-bind="true">
-       	  Team Number: <input type="text" name="teamName"><br>
-  		  Match Number: <input type="text" name="matchName"><br>
-  		  Scouter Name: <input type="text" name="scoutName"><br>
+<!-- BackEnd.recordData  data-bind="true"-->
+  	<form action="cgi-bin/test.py" id="pitScoutForm" method="post">
+  		<div id="headerthing">
+       	  Team Number: <input type="text" name="teamName" class="namnumbox"><br><br>
+  		  Match Number: <input type="text" name="matchName" class="namnumbox"><br><br>
+  		  Scouter Name: <input type="text" name="scoutName" class="namnumbox"><br><br>
   		  <p>
              <label>Alliance Station</label>
-             <select name = "allianceStation">
+             <select name = "allianceStation" class="namnumbox">
                <option value = "blank">---</option>
                <option value = "Red1">Red 1</option>
                <option value = "Red2">Red 2</option>
@@ -25,7 +26,7 @@
                <option value = "Blue3">Blue 3</option>
              </select>
           </p>
-  	
+  	</div>
        <fieldset>
           <legend>Autonmous</legend>
 
@@ -65,7 +66,7 @@
       				</td>
       				<td>
       				<!-- <label>Starting Pos.</label> -->
-		             <select name = "startingposauto" class="dropdownlist">
+		             <select name = "startingposauto" class="namnumbox">
 		               <option value = "blank">---</option>
 		               <option value = "pos1">1</option>
 		               <option value = "pos2">2</option>
@@ -197,8 +198,26 @@
           
        </fieldset>
 
-       <input type="submit" value="Submit" id="form_submit">
-       <input type="reset" value="Reset">
+<br>
+<br>
+<table>
+	<tr>
+		<th>
+		<!-- <img src="Minus.png" class="plusminus" onclick=submittodb()> -->
+		<input type="submit" value="Submit" id="form_submit" class="submitbtn" onclick=submit()>	
+		</th>
+		<th>
+		<input type="reset" value="Reset" class="resetbtn">	
+		</th>
+
+	</tr>	
+
+</table>
+
+
+
+       
+       
     </form>
 
    <!--  <input type="button" href ="BackEnd.recordData" data-bind="true" name="input" value="Save Pit Scouting Sheet">
