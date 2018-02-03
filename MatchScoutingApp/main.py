@@ -8,8 +8,9 @@ app = htmlPy.AppGUI(
     title=u"Team 573 2018 Pit Scouting App")
 app.maximized = True
 #app.template_path = "C:\Users\savag\Desktop\ScoutingApp\Team573_2018ScoutingApps\MatchScoutingApp"
-app.template_path = os.path.abspath(".")
-app.static_path = os.path.abspath(".")
+oscwd = os.getcwd()
+app.template_path = oscwd
+app.static_path = oscwd
 app.bind(BackEnd(app))
 
 
