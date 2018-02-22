@@ -27,6 +27,10 @@ shutil.copy('ScoutingData_template.xlsx','ScoutingData_'+CurrDateTime+'.xlsx')
 db = sqlite3.connect('CombinedMatchedData')
 c = db.cursor()
 
+#Connect To Pit Database
+db_pit = sqlite3.connect('CombinedPitData')
+c_pit = db_pit.cursor()
+
 #Opens Excel Spreadsheet
 wb = load_workbook('ScoutingData_'+CurrDateTime+'.xlsx')
 
@@ -63,10 +67,17 @@ for inc, team in enumerate(TeamList):
 #----------------------------------------
 
     #Fill out data on sheet
-    ws2.cell(column=2,row=1).value = team
-    ws2.cell(column=2,row=2).value = TeamNameList[inc]
+    ws2.cell(row=1,column=2).value = team
+    ws2.cell(row=2,column=2).value = TeamNameList[inc]
     
     #Put in pit scouting data
+    c_pit.execute("SELECT * FROM pitdata WHERE teamName="+team)
+    rows_pit = c_pit.fetchall()
+
+    for inc3, row_pit in enumerate(rows_pit):
+        ws2.cell(row=inc3+5,column=2).value = row_pit[20]
+        ws2.cell(row=inc3+6,column=2).value = row_pit[21]
+        ws2.cell(row=inc3+7,column=2).value = row_pit[6]
 
     #Put in match scouting data
     c.execute("SELECT * FROM matchdata WHERE teamName="+team)
@@ -195,6 +206,9 @@ for inc, team in enumerate(TeamList):
     ws_sum.cell(row = inc+9,column = 26).value = "='"+team+"'!"+"J16"
     ws_sum.cell(row = inc+9,column = 27).value = "='"+team+"'!"+"K16"
     ws_sum.cell(row = inc+9,column = 28).value = "='"+team+"'!"+"L16"
+
+    ws_sum.cell(row = inc+9,column = 29).value = "='"+team+"'!"+"B5" #Pit Scout
+    ws_sum.cell(row = inc+9,column = 30).value = "='"+team+"'!"+"B6"
     #ws["A1"] = "=SUM('1'!B1 + '2'!B1 )" #Example
     
 #Save workbook
