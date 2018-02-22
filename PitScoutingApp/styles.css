@@ -1,0 +1,42 @@
+h1{
+font-size: 80px;
+
+}
+p{
+    font-size: 45px;
+}
+.teamnum{
+    font-size: 45px;
+}
+.checkboxes{
+    width: 40px;
+    height: 40px;
+    background: #ddd;
+    margin: 20px 90px;
+    bottom: 15px;
+    border-radius: 100%;
+    position: relative;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.submitbtn{
+    background-color: #ff7f27; /* Orange*/
+    border: none;
+    color: white;
+    padding: 30px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+}
+
+.resetbtn{
+    background-color: #ff0000; /* Red*/
+    border: none;
+    color: white;
+    padding: 30px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+}

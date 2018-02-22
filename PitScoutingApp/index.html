@@ -1,4 +1,5 @@
 <html>
+<link rel="stylesheet" href="C:\Users\savag\Desktop\ScoutingApp\Team573_2018ScoutingApps\PitScoutingApp\styles.css">
   <body>
   	<h1 title="Team 573 2018 Pit Scouting App">
   	Team 573 2018 Pit Scouting App</h1>
@@ -6,15 +7,15 @@
   		Along with filling out this page please also get a photo of each robot.
   	</p>
 
-  	<form action="BackEnd.recordData" id="pitScoutForm" data-bind="true">
-       	  Team Number: <input type="text" name="teamName"><br>
-  		  Scouter Name: <input type="text" name="scoutName"><br>
+  	<form action="BackEnd.recordData" id="pitScoutForm" data-bind="true" class="teamnum">
+       	  Team Number: <input type="text" name="teamName" class = "teamnum"><br><br>
+  		  Scouter Name: <input type="text" name="scoutName" class = "teamnum"><br>
   	
        <fieldset>
           <legend>General Robot Questions</legend>
           <p>
              <label>Robot Drive Type:</label>
-             <select name = "driveType">
+             <select name = "driveType" class="teamnum">
                <option value = "blank">---</option>
                <option value = "4-Wheel Tank">4-Wheel Tank</option>
                <option value = "6-Wheel Tank">6-Wheel Tank</option>
@@ -26,7 +27,7 @@
           </p>
            <p>
              <label>Bumper Height From Ground:</label>
-             <select name = "bumperHeight">
+             <select name = "bumperHeight" class="teamnum">
              	<option value = "blank">---</option>
                <option value = "0 in">0 in</option>
                <option value = "0.5 in">0.5 in</option>
@@ -38,9 +39,9 @@
           </p>
           <p>
           <label>Can you place a cube in the following places?</label><br>
-		  <input type="checkbox" name="exchange" > Exchange <br>
-		  <input type="checkbox" name="switch" > Switch <br>
-		  <input type="checkbox" name="scale" > Scale <br>
+		  <input type="checkbox" name="exchange" class="checkboxes"> Exchange <br>
+		  <input type="checkbox" name="switch" class="checkboxes"> Switch <br>
+		  <input type="checkbox" name="scale" class="checkboxes"> Scale <br>
 		  </p>
 		</fieldset>
 
@@ -49,26 +50,26 @@
           <legend>End Game Questions</legend>
           <p>
           <label>What can you do in the end game?</label><br>
-          <input type="checkbox" name="driveOnPlatform" > Drive Onto Platform <br>
-		  <input type="checkbox" name="driveOnRamp" > Drive Onto Others Ramps <br>
-		  <input type="checkbox" name="deployRamp" > Deploy Ramps For Other Robots <br>
-		  <input type="checkbox" name="climb" > Climb Single <br>
-		  <input type="checkbox" name="climbWithOther" > Climb And Let Other Robot Climb Off Of You <br>
+          <input type="checkbox" name="driveOnPlatform" class="checkboxes"> Drive Onto Platform <br>
+		  <input type="checkbox" name="driveOnRamp" class="checkboxes"> Drive Onto Others Ramps <br>
+		  <input type="checkbox" name="deployRamp" class="checkboxes"> Deploy Ramps For Other Robots <br>
+		  <input type="checkbox" name="climb" class="checkboxes"> Climb Single <br>
+		  <input type="checkbox" name="climbWithOther" class="checkboxes"> Climb And Let Other Robot Climb Off Of You <br>
           </p>
       </fieldset>
        <fieldset>
           <legend>Autonomous Questions</legend>
           <p>
           <label>Check all Automodes that they have?</label><br>
-		  <input type="checkbox" name="crossLine"> Cross Line <br>
-		  <input type="checkbox" name="scoreSwitch" > Place Cube on Switch <br>
-		  <input type="checkbox" name="scoreScale" > Place Cube on Scale <br>
-		  <input type="checkbox" name="scoreExchange" > Place Cube in Exchange <br>
-		  <input type="checkbox" name="scoreSwitchandScale" > Place Cube on Scale then Switch <br>
-		  <input type="checkbox" name="scoreDoubleSwitch" > Place 2 Cubes on Switch <br>
-		  <input type="checkbox" name="scoreDoubleScale" > Place 2 Cubes on Scale <br>
-		  <input type="checkbox" name="scoreDoubleExchange" > Place 2 Cubes in Exchange <br>
-		  <input type="checkbox" name="other" > Other - Write Description in Notes <br>
+		  <input type="checkbox" name="crossLine" class="checkboxes"> Cross Line <br>
+		  <input type="checkbox" name="scoreSwitch" class="checkboxes"> Place Cube on Switch <br>
+		  <input type="checkbox" name="scoreScale" class="checkboxes"> Place Cube on Scale <br>
+		  <input type="checkbox" name="scoreExchange" class="checkboxes"> Place Cube in Exchange <br>
+		  <input type="checkbox" name="scoreSwitchandScale" class="checkboxes"> Place Cube on Scale then Switch <br>
+		  <input type="checkbox" name="scoreDoubleSwitch" class="checkboxes"> Place 2 Cubes on Switch <br>
+		  <input type="checkbox" name="scoreDoubleScale" class="checkboxes"> Place 2 Cubes on Scale <br>
+		  <input type="checkbox" name="scoreDoubleExchange" class="checkboxes"> Place 2 Cubes in Exchange <br>
+		  <input type="checkbox" name="other" class="checkboxes"> Other - Write Description in Notes <br>
           </p>
        </fieldset>
 
@@ -79,8 +80,12 @@
           
        </fieldset>
 
-       <input type="submit" value="Submit" id="form_submit">
-       <input type="reset" value="Reset">
+       <input type="submit" value="Submit" id="form_submit" class="submitbtn">
+      </th>
+      <th>
+       <input type="reset" value="Reset" class="resetbtn">
+      </th>
+      <th>
     </form>
 
    <!--  <input type="button" href ="BackEnd.recordData" data-bind="true" name="input" value="Save Pit Scouting Sheet">
