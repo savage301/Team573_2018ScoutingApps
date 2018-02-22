@@ -9,6 +9,8 @@ import shutil
 from datetime import datetime
 import json
 import sqlite3
+from PIL import Image
+import PIL
 
 #Print Script Start
 print '!!!!!!!!! Script Start !!!!!!!!!'
@@ -154,14 +156,19 @@ for inc, team in enumerate(TeamList):
         ws2.cell(row=inc2+17,column=18).value = row[3]
 
 ###Put in picture ----------------------------------
-##    if (os.path.isfile('Pic/'+team+'.jpg')): #Check to make sure picture exists
-##        teamnum = team
-##    else:
-##        teamnum ='WILogo' #Stand in Photo For Teams With Missing Picture
-##
-##    img = openpyxl.drawing.image.Image('Pic/'+teamnum+'.jpg')
-##    img.anchor(ws2['G1'])
-##    ws2.add_image(img)
+    if (os.path.isfile('Pic/'+team+'.jpg')): #Check to make sure picture exists
+        teamnum = team
+    else:
+        teamnum ='default' #Stand in Photo For Teams With Missing Picture
+
+    #print teamnum
+    #anchor = 'G1'
+    
+    im = Image.open('Pic/'+teamnum+'.jpg')
+    image2 = im.resize((250,250),Image.ANTIALIAS)
+    image2.save(teamnum + "_thumbnail.jpg", "JPEG")
+    img = openpyxl.drawing.image.Image(teamnum + "_thumbnail.jpg")
+    ws2.add_image(img,'G3')
 # ------------------------------------------------------
 
     # Add in Summary Page Info
